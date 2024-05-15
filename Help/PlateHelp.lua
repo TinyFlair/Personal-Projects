@@ -7,7 +7,7 @@ local Plate = script.Parent
 local startingPosition = Vector3.new(0, 3, 0)
 local goalPosition  = Vector3.new(10, 3, 0)
 
-local movingPart_TweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true)
+local movingPart_TweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true, 1)
 
 local debounce = false
 
@@ -20,9 +20,6 @@ local function whenHopped(object)
     
     -- Tween stuff
     local movingPart_Tween = TweenService:Create(Plate, movingPart_TweenInfo, {Position = goalPosition})
-
-    task.wait(1) -- Up-To-Date wait()
-
     movingPart_Tween:Play()
 
     -- Unless you do movingPart_Tween:Stop() the tween will now continue running endlessly. The next 3 lines are just incase you do decide to do movingPart_Tween:Stop()
