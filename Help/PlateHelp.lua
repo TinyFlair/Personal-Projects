@@ -22,7 +22,7 @@ local function whenHopped(object)
     local movingPart_Tween = TweenService:Create(Plate, movingPart_TweenInfo, {Position = goalPosition})
     movingPart_Tween:Play()
 
-    -- Unless you do movingPart_Tween:Stop() the tween will now continue running endlessly. The next 3 lines are just incase you do decide to do movingPart_Tween:Stop()
+    -- Unless you do movingPart_Tween:Stop() the tween will now continue running endlessly. The next 2 lines are just incase you do decide to do movingPart_Tween:Stop()
 
     movingPart_Tween.Completed:Wait()
     debounce = false
